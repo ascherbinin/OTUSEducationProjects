@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RootView.swift
 //  OTUSLesson1_SwiftUI
 //
 //  Created by Scherbinin Andrey on 29.11.2019.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RootView: View {
     var body: some View {
         Text("Hello, World!")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RootViewView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView()
     }
 }
