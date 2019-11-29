@@ -1,5 +1,5 @@
 //
-//  RootView.swift
+//  ListTabView.swift
 //  OTUSLesson1_SwiftUI
 //
 //  Created by Scherbinin Andrey on 29.11.2019.
@@ -8,14 +8,18 @@
 
 import SwiftUI
 
-struct RootView: View {
+struct ListTabView: View {
     var body: some View {
-        MainTabView()
+        List {
+            Text("First")
+            Text("Secont")
+            Text("Third")
+        }
     }
 }
 
-struct RootViewView_Previews: PreviewProvider {
+struct ListTabView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+        ListTabView()
     }
 }

@@ -13,6 +13,11 @@
 		938290612390C0B9002E6E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938290602390C0B9002E6E28 /* Assets.xcassets */; };
 		938290642390C0B9002E6E28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938290632390C0B9002E6E28 /* Preview Assets.xcassets */; };
 		938290672390C0B9002E6E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938290652390C0B9002E6E28 /* LaunchScreen.storyboard */; };
+		938290702390C173002E6E28 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382906F2390C173002E6E28 /* MainTabView.swift */; };
+		938290722390C1D9002E6E28 /* FirstButtonTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290712390C1D9002E6E28 /* FirstButtonTabView.swift */; };
+		938290742390C2C5002E6E28 /* ListTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290732390C2C5002E6E28 /* ListTabView.swift */; };
+		938290762390C3A1002E6E28 /* ModalTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290752390C3A1002E6E28 /* ModalTabView.swift */; };
+		938290782390C3DF002E6E28 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290772390C3DF002E6E28 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		938290632390C0B9002E6E28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		938290662390C0B9002E6E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		938290682390C0B9002E6E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9382906F2390C173002E6E28 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		938290712390C1D9002E6E28 /* FirstButtonTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstButtonTabView.swift; sourceTree = "<group>"; };
+		938290732390C2C5002E6E28 /* ListTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTabView.swift; sourceTree = "<group>"; };
+		938290752390C3A1002E6E28 /* ModalTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTabView.swift; sourceTree = "<group>"; };
+		938290772390C3DF002E6E28 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				9382905E2390C0B7002E6E28 /* RootView.swift */,
+				9382906F2390C173002E6E28 /* MainTabView.swift */,
+				938290712390C1D9002E6E28 /* FirstButtonTabView.swift */,
+				938290732390C2C5002E6E28 /* ListTabView.swift */,
+				938290752390C3A1002E6E28 /* ModalTabView.swift */,
+				938290772390C3DF002E6E28 /* ModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938290742390C2C5002E6E28 /* ListTabView.swift in Sources */,
+				938290722390C1D9002E6E28 /* FirstButtonTabView.swift in Sources */,
+				938290782390C3DF002E6E28 /* ModalView.swift in Sources */,
+				938290762390C3A1002E6E28 /* ModalTabView.swift in Sources */,
 				9382905B2390C0B7002E6E28 /* AppDelegate.swift in Sources */,
 				9382905D2390C0B7002E6E28 /* SceneDelegate.swift in Sources */,
 				9382905F2390C0B7002E6E28 /* RootView.swift in Sources */,
+				938290702390C173002E6E28 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
