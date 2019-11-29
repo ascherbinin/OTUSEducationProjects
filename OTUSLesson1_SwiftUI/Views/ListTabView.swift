@@ -9,11 +9,24 @@
 import SwiftUI
 
 struct ListTabView: View {
+
+    init() {
+        UITableView.appearance().separatorStyle = .none
+    }
+
+    @ObservedObject var viewModel = MatchesListViewModel()
+    
     var body: some View {
-        List {
-            Text("First")
-            Text("Secont")
-            Text("Third")
+
+        NavigationView {
+            List {
+                ForEach(viewModel.matches) { match in
+                    NavigationLink(destination: MatchDetailsView(match: match)) {
+                        Text(match.name)
+                    }
+                }
+            }
+            .navigationBarTitle("Matches")
         }
     }
 }
