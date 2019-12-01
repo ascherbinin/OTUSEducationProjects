@@ -11,17 +11,19 @@ import SwiftUI
 struct MainTabView: View {
 
     @State private var currentSelection = 0
+    @State private var fromFirstTab = false
 
     var body: some View {
         TabView(selection: $currentSelection) {
-            FirstButtonTabView().tabItem {
+            FirstButtonTabView(currentSelection: $currentSelection,
+                               fromFirstTab: $fromFirstTab).tabItem {
                 VStack {
                     Text("First")
                         .font(Font.headline)
                     Image(systemName: "textformat.superscript")
                 }
             }.tag(0)
-            ListTabView().tabItem {
+            ListTabView(fromFirstTab: $fromFirstTab).tabItem {
                 VStack {
                     Text("List")
                         .font(Font.headline)

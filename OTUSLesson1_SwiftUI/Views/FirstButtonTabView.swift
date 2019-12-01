@@ -10,11 +10,15 @@ import SwiftUI
 
 struct FirstButtonTabView: View {
 
-     @State private var isTapped: Bool = false
+    @State private var isTapped: Bool = false
+    @Binding var currentSelection: Int
+    @Binding var fromFirstTab: Bool
 
     var body: some View {
         Button(action: {
             self.isTapped = true
+            self.$fromFirstTab.wrappedValue = true
+            self.$currentSelection.wrappedValue = 1
         }) {
             Text("Open second")
         }
@@ -22,8 +26,8 @@ struct FirstButtonTabView: View {
     }
 }
 
-struct FirstButtonTab_Previews: PreviewProvider {
-    static var previews: some View {
-        FirstButtonTabView()
-    }
-}
+//struct FirstButtonTab_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FirstButtonTabView()
+//    }
+//}

@@ -7,32 +7,47 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ListTabView: View {
 
-    init() {
-        UITableView.appearance().separatorStyle = .none
-    }
-
     @ObservedObject var viewModel = MatchesListViewModel()
+    @Binding var fromFirstTab: Bool
     
     var body: some View {
 
         NavigationView {
-            List {
-                ForEach(viewModel.matches) { match in
-                    NavigationLink(destination: MatchDetailsView(match: match)) {
-                        Text(match.name)
+            VStack {
+                List {
+                    ForEach(viewModel.matches) { match in
+                        NavigationLink(destination: MatchDetailsView(match: match)) {
+                            Text(match.name)
+                        }
                     }
                 }
+                .navigationBarTitle("Matches")
+                NavigationLink(destination:
+                    MatchDetailsView(match: viewModel.getRandomMatch()),
+                               isActive: $viewModel.needShowRandomElements
+                    )
+                { EmptyView() }
             }
-            .navigationBarTitle("Matches")
+
+        }.onAppear {
+            if self.fromFirstTab {
+                self.viewModel.needShowRandomElements = true
+                self.fromFirstTab = false
+            }
         }
+
     }
 }
 
 struct ListTabView_Previews: PreviewProvider {
+
+    @State static var notFirstTab = true
+
     static var previews: some View {
-        ListTabView()
+        ListTabView(fromFirstTab: $notFirstTab)
     }
 }

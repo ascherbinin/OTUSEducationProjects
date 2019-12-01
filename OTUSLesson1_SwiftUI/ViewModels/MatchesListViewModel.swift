@@ -14,6 +14,8 @@ struct Constants {
 
 final class MatchesListViewModel: ObservableObject {
 
+    @Published var needShowRandomElements = false
+
     @Published private(set) var matches = [
         Match(gameID: Constants.dotaId, date: Date(),
               stat: Statistics(kills: 3, deaths: 2, assists: 0, isWin: false)),
@@ -24,4 +26,8 @@ final class MatchesListViewModel: ObservableObject {
         Match(gameID: Constants.dotaId, date: Date(),
               stat: Statistics(kills: 6, deaths: 1, assists: 3, isWin: false))
     ]
+
+    func getRandomMatch() -> Match {
+        return matches.randomElement()!
+    }
 }
