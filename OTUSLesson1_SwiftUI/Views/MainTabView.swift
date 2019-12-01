@@ -10,6 +10,10 @@ import SwiftUI
 
 struct MainTabView: View {
 
+   init() {
+        UITableView.appearance().separatorStyle = .none
+    }
+
     @State private var currentSelection = 0
     @State private var fromFirstTab = false
 
