@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		938290802390C81C002E6E28 /* MatchesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382907F2390C81C002E6E28 /* MatchesListViewModel.swift */; };
 		938290842390CDC0002E6E28 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290832390CDC0002E6E28 /* MatchDetailsView.swift */; };
 		938290872390CE6F002E6E28 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290862390CE6F002E6E28 /* DateExtensions.swift */; };
+		938290AA2394C5F7002E6E28 /* BetterSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 938290A92394C5F7002E6E28 /* BetterSheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938290AA2394C5F7002E6E28 /* BetterSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +155,9 @@
 			dependencies = (
 			);
 			name = OTUSLesson1_SwiftUI;
+			packageProductDependencies = (
+				938290A92394C5F7002E6E28 /* BetterSheet */,
+			);
 			productName = OTUSLesson1_SwiftUI;
 			productReference = 938290572390C0B7002E6E28 /* OTUSLesson1_SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +186,9 @@
 				Base,
 			);
 			mainGroup = 9382904E2390C0B7002E6E28;
+			packageReferences = (
+				938290A82394C5F7002E6E28 /* XCRemoteSwiftPackageReference "BetterSheet" */,
+			);
 			productRefGroup = 938290582390C0B7002E6E28 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -414,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		938290A82394C5F7002E6E28 /* XCRemoteSwiftPackageReference "BetterSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/egeniq/BetterSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		938290A92394C5F7002E6E28 /* BetterSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 938290A82394C5F7002E6E28 /* XCRemoteSwiftPackageReference "BetterSheet" */;
+			productName = BetterSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9382904F2390C0B7002E6E28 /* Project object */;
 }
