@@ -30,4 +30,11 @@ final class MatchesListViewModel: ObservableObject {
     func getRandomMatch() -> Match {
         return matches.randomElement()!
     }
+
+    func getMatchByIndex(index: Int) -> Match? {
+        if matches.count == 0 || index > matches.count {
+            return nil
+        }
+        return matches[index]
+    }
 }
