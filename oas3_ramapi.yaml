@@ -1,0 +1,83 @@
+openapi: 3.0.1
+info:
+  title: RAMApi
+  description: https://rickandmortyapi.com
+  version: 1.0.0
+servers:
+- url: https://rickandmortyapi.com/api/
+tags:
+  - name: characters
+    description: Characters
+paths:
+  /character/:
+    get:
+      tags: 
+        - characters
+      summary: Characters List
+      operationId: charactersGet
+      parameters:
+      - name: page
+        in: query
+        description: number of page
+        schema:
+          type: integer
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/CharactersList'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+components:
+  schemas:
+    ErrorModel:
+      type: object
+      required:
+      - message
+      - code
+      properties:
+        message:
+          type: string
+        code:
+          type: integer
+          minimum: 100
+          maximum: 600
+    CharactersList:
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/Info'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Character'
+    Character:
+      type: object
+      properties:
+        id:
+          type: integer
+        name: 
+          type: string
+        status: 
+          type: string
+        gender: 
+          type: string
+        image: 
+          type: string
+    Info:
+      type: object
+      properties:
+        count:
+          type: integer
+        pages:
+          type: integer
+        next:
+          type: string
+        prev:
+          type: string

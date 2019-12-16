@@ -41,6 +41,15 @@ struct MainTabView: View {
                     Image(systemName: "stop")
                 }
             }.tag(2)
+            CharactersListView()
+                .environmentObject(CharactersListViewModel())
+                .tabItem {
+                    VStack {
+                        Text("RAM")
+                            .font(Font.headline)
+                        Image(systemName: "person.3")
+                    }
+            }.tag(3)
         }
     }
 }
