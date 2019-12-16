@@ -23,9 +23,3 @@ struct FirstButtonTabView: View {
         .font(Font.largeTitle)
     }
 }
-
-//struct FirstButtonTab_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FirstButtonTabView()
-//    }
-//}
