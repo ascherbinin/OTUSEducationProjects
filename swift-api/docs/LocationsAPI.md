@@ -1,18 +1,18 @@
-# CharactersAPI
+# LocationsAPI
 
 All URIs are relative to *https://rickandmortyapi.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**characters**](CharactersAPI.md#characters) | **GET** /character/ | Characters List
+[**locations**](LocationsAPI.md#locations) | **GET** /location/ | Locations List
 
 
-# **characters**
+# **locations**
 ```swift
-    open class func characters(page: Int? = nil, completion: @escaping (_ data: CharactersList?, _ error: Error?) -> Void)
+    open class func locations(page: Int? = nil, completion: @escaping (_ data: LocationsList?, _ error: Error?) -> Void)
 ```
 
-Characters List
+Locations List
 
 ### Example 
 ```swift
@@ -21,8 +21,8 @@ import OpenAPIClient
 
 let page = 987 // Int | number of page (optional)
 
-// Characters List
-CharactersAPI.characters(page: page) { (response, error) in
+// Locations List
+LocationsAPI.locations(page: page) { (response, error) in
     guard error == nil else {
         print(error)
         return
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CharactersList**](CharactersList.md)
+[**LocationsList**](LocationsList.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ import Combine
 
 final class CharactersListViewModel: ObservableObject {
 
-    @Published private(set) var characters = [ModelCharacter]()
+    @Published private(set) var characters = [Location]()
     @Published var pageIndex: Int = 1
     @Published var isNewPageLoading = false
 
@@ -25,7 +25,7 @@ final class CharactersListViewModel: ObservableObject {
         }
         isNewPageLoading = true
         self.pageIndex += 1
-        CharactersAPI.charactersGet(page: pageIndex)
+        LocationsAPI.locations(page: pageIndex)
         { list, error in
             self.characters.append(contentsOf: list?.results ?? [])
             self.isNewPageLoading = false
@@ -34,3 +34,5 @@ final class CharactersListViewModel: ObservableObject {
 }
 
 extension ModelCharacter: Identifiable { }
+
+extension Location: Identifiable { }

@@ -25,7 +25,8 @@ All URIs are relative to *https://rickandmortyapi.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CharactersAPI* | [**charactersGet**](docs/CharactersAPI.md#charactersget) | **GET** /character/ | Characters List
+*CharactersAPI* | [**characters**](docs/CharactersAPI.md#characters) | **GET** /character/ | Characters List
+*LocationsAPI* | [**locations**](docs/LocationsAPI.md#locations) | **GET** /location/ | Locations List
 
 
 ## Documentation For Models
@@ -33,6 +34,8 @@ Class | Method | HTTP request | Description
  - [CharactersList](docs/CharactersList.md)
  - [ErrorModel](docs/ErrorModel.md)
  - [Info](docs/Info.md)
+ - [Location](docs/Location.md)
+ - [LocationsList](docs/LocationsList.md)
  - [ModelCharacter](docs/ModelCharacter.md)
 
 

@@ -18,7 +18,7 @@ struct CharactersListView: View {
                 // Cell
                 VStack(alignment: .leading) {
                     Text(character.name ?? "")
-                    Text(character.gender ?? "")
+                    Text(character.type ?? "")
                     // Loading
                     if self.charactersListViewModel.isNewPageLoading && self.charactersListViewModel.characters.isLastItem(character) {
                         Divider()

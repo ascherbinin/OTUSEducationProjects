@@ -16,8 +16,8 @@ open class CharactersAPI {
      - parameter page: (query) number of page (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func charactersGet(page: Int? = nil, completion: @escaping ((_ data: CharactersList?,_ error: Error?) -> Void)) {
-        charactersGetWithRequestBuilder(page: page).execute { (response, error) -> Void in
+    open class func characters(page: Int? = nil, completion: @escaping ((_ data: CharactersList?,_ error: Error?) -> Void)) {
+        charactersWithRequestBuilder(page: page).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -28,7 +28,7 @@ open class CharactersAPI {
      - parameter page: (query) number of page (optional)
      - returns: RequestBuilder<CharactersList> 
      */
-    open class func charactersGetWithRequestBuilder(page: Int? = nil) -> RequestBuilder<CharactersList> {
+    open class func charactersWithRequestBuilder(page: Int? = nil) -> RequestBuilder<CharactersList> {
         let path = "/character/"
         let URLString = OpenAPIClientAPI.basePath + path
         let parameters: [String:Any]? = nil

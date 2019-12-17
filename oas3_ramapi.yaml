@@ -8,13 +8,15 @@ servers:
 tags:
   - name: characters
     description: Characters
+  - name: locations
+    description: Locations
 paths:
   /character/:
     get:
       tags: 
         - characters
       summary: Characters List
-      operationId: charactersGet
+      operationId: characters
       parameters:
       - name: page
         in: query
@@ -28,6 +30,31 @@ paths:
             application/json:
               schema: 
                 $ref: '#/components/schemas/CharactersList'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+  /location/:
+    get:
+      tags: 
+        - locations
+      summary: Locations List
+      operationId: locations
+      parameters:
+      - name: page
+        in: query
+        description: number of page
+        schema:
+          type: integer
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/LocationsList'
         default:
           description: enexpected error
           content:
@@ -69,6 +96,28 @@ components:
         gender: 
           type: string
         image: 
+          type: string
+    LocationsList:
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/Info'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Location'
+    Location:
+      type: object
+      properties:
+        id:
+          type: integer
+        name: 
+          type: string
+        type: 
+          type: string
+        dimension: 
+          type: string
+        url: 
           type: string
     Info:
       type: object
