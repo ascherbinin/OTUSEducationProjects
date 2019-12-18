@@ -41,6 +41,15 @@ struct MainTabView: View {
                     Image(systemName: "stop")
                 }
             }.tag(2)
+            MultiModelsListView()
+                .environmentObject(MultiModelsListViewModel())
+                .tabItem {
+                    VStack {
+                        Text("RAM")
+                            .font(Font.headline)
+                        Image(systemName: "person.3")
+                    }
+            }.tag(3)
         }
     }
 }
