@@ -8,26 +8,16 @@
 
 import SwiftUI
 
-struct CharactersListView: View {
+struct MultiModelsListView: View {
 
-    @EnvironmentObject var listViewModel: CharactersListViewModel
+    @EnvironmentObject var listViewModel: MultiModelsListViewModel
 
-    @State private var selectorIndex = 0
     @State private var endpoints = ["Characters","Locations"]
-
-    private var segmentProxy:Binding<Int> {
-        Binding<Int>(get: { self.selectorIndex },
-                     set: {
-            self.selectorIndex = $0
-            self.listViewModel.apply(.onChangeSegment(index: $0))
-            self.listViewModel.selectorIndex = $0
-        })
-    }
 
     var body: some View {
         NavigationView {
             VStack {
-                Picker("Endpoints", selection: segmentProxy) {
+                Picker("Endpoints", selection: $listViewModel.selectorIndex) {
                     ForEach(0 ..< endpoints.count) { index in
                         Text(self.endpoints[index]).tag(index)
                     }
@@ -40,17 +30,19 @@ struct CharactersListView: View {
                         Text(model.model.name ?? "")
                         Text(model.model.type ?? "")
                         // Loading
-//                        if self.charactersListViewModel.isNewPageLoading && self.charactersListViewModel.models.isLastItem(model) {
-//                            Divider()
-//                            Text("Loading...")
-//                        }
+                        if self.listViewModel.isNewPageLoading && self.listViewModel.models.isLastItem(model) {
+                            Divider()
+                            HStack() {
+                                Spacer()
+                                ActivityIndicatorView()
+                                Spacer()
+                            }
+                        }
                     }.onAppear {
                         self.onItemShowed(model)
                     }
                 }
                 .navigationBarTitle("Characters")
-            }.onAppear {
-                self.listViewModel.pageLoad()
             }
         }
     }
@@ -58,7 +50,7 @@ struct CharactersListView: View {
 
 }
 
-extension CharactersListView {
+extension MultiModelsListView {
     private func onItemShowed<T:Identifiable>(_ item: T) {
         // Load
         if self.listViewModel.models.isLastItem(item) {
@@ -69,6 +61,6 @@ extension CharactersListView {
 
 struct CharactersListView_Previews: PreviewProvider {
     static var previews: some View {
-        CharactersListView().environmentObject(CharactersListViewModel())
+        MultiModelsListView().environmentObject(MultiModelsListViewModel())
     }
 }

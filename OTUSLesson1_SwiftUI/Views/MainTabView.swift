@@ -41,8 +41,8 @@ struct MainTabView: View {
                     Image(systemName: "stop")
                 }
             }.tag(2)
-            CharactersListView()
-                .environmentObject(CharactersListViewModel())
+            MultiModelsListView()
+                .environmentObject(MultiModelsListViewModel())
                 .tabItem {
                     VStack {
                         Text("RAM")
