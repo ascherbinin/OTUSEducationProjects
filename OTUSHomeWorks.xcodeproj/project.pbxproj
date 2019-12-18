@@ -49,7 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		938290572390C0B7002E6E28 /* OTUSLesson1_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTUSLesson1_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		938290572390C0B7002E6E28 /* OTUSHomeWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTUSHomeWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9382905A2390C0B7002E6E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9382905C2390C0B7002E6E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9382905E2390C0B7002E6E28 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		9382904E2390C0B7002E6E28 = {
 			isa = PBXGroup;
 			children = (
-				938290592390C0B7002E6E28 /* OTUSLesson1_SwiftUI */,
+				938290592390C0B7002E6E28 /* OTUSHomeWorks */,
 				938290582390C0B7002E6E28 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,12 +114,12 @@
 		938290582390C0B7002E6E28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				938290572390C0B7002E6E28 /* OTUSLesson1_SwiftUI.app */,
+				938290572390C0B7002E6E28 /* OTUSHomeWorks.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		938290592390C0B7002E6E28 /* OTUSLesson1_SwiftUI */ = {
+		938290592390C0B7002E6E28 /* OTUSHomeWorks */ = {
 			isa = PBXGroup;
 			children = (
 				93BA309E23A9DFA100D265F3 /* Kit */,
@@ -135,7 +135,7 @@
 				938290682390C0B9002E6E28 /* Info.plist */,
 				938290622390C0B9002E6E28 /* Preview Content */,
 			);
-			path = OTUSLesson1_SwiftUI;
+			path = OTUSHomeWorks;
 			sourceTree = "<group>";
 		};
 		938290622390C0B9002E6E28 /* Preview Content */ = {
@@ -255,9 +255,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		938290562390C0B7002E6E28 /* OTUSLesson1_SwiftUI */ = {
+		938290562390C0B7002E6E28 /* OTUSHomeWorks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9382906B2390C0B9002E6E28 /* Build configuration list for PBXNativeTarget "OTUSLesson1_SwiftUI" */;
+			buildConfigurationList = 9382906B2390C0B9002E6E28 /* Build configuration list for PBXNativeTarget "OTUSHomeWorks" */;
 			buildPhases = (
 				938290532390C0B7002E6E28 /* Sources */,
 				938290542390C0B7002E6E28 /* Frameworks */,
@@ -267,13 +267,13 @@
 			);
 			dependencies = (
 			);
-			name = OTUSLesson1_SwiftUI;
+			name = OTUSHomeWorks;
 			packageProductDependencies = (
 				938290A92394C5F7002E6E28 /* BetterSheet */,
 				939A98C623A7A3AA00250C7B /* Alamofire */,
 			);
 			productName = OTUSLesson1_SwiftUI;
-			productReference = 938290572390C0B7002E6E28 /* OTUSLesson1_SwiftUI.app */;
+			productReference = 938290572390C0B7002E6E28 /* OTUSHomeWorks.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -291,7 +291,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 938290522390C0B7002E6E28 /* Build configuration list for PBXProject "OTUSLesson1_SwiftUI" */;
+			buildConfigurationList = 938290522390C0B7002E6E28 /* Build configuration list for PBXProject "OTUSHomeWorks" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -308,7 +308,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				938290562390C0B7002E6E28 /* OTUSLesson1_SwiftUI */,
+				938290562390C0B7002E6E28 /* OTUSHomeWorks */,
 			);
 		};
 /* End PBXProject section */
@@ -501,15 +501,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"OTUSLesson1_SwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"OTUSHomeWorks/Preview Content\"";
 				DEVELOPMENT_TEAM = 8PCTL6TV7M;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = OTUSLesson1_SwiftUI/Info.plist;
+				INFOPLIST_FILE = OTUSHomeWorks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ascherbinin.OTUSLesson1-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.OTUSHomeWorks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -521,15 +521,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"OTUSLesson1_SwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"OTUSHomeWorks/Preview Content\"";
 				DEVELOPMENT_TEAM = 8PCTL6TV7M;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = OTUSLesson1_SwiftUI/Info.plist;
+				INFOPLIST_FILE = OTUSHomeWorks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ascherbinin.OTUSLesson1-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.OTUSHomeWorks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		938290522390C0B7002E6E28 /* Build configuration list for PBXProject "OTUSLesson1_SwiftUI" */ = {
+		938290522390C0B7002E6E28 /* Build configuration list for PBXProject "OTUSHomeWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				938290692390C0B9002E6E28 /* Debug */,
@@ -548,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9382906B2390C0B9002E6E28 /* Build configuration list for PBXNativeTarget "OTUSLesson1_SwiftUI" */ = {
+		9382906B2390C0B9002E6E28 /* Build configuration list for PBXNativeTarget "OTUSHomeWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9382906C2390C0B9002E6E28 /* Debug */,
