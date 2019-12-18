@@ -1,29 +1,22 @@
 //
-//  CharactersListView.swift
-//  OTUSLesson1_SwiftUI
+//  ScrollMultiModelsView.swift
+//  OTUSHomeWorks
 //
-//  Created by Scherbinin Andrey on 16.12.2019.
+//  Created by Scherbinin Andrey on 18.12.2019.
 //  Copyright © 2019 Scherbinin Andrey. All rights reserved.
 //
 
 import SwiftUI
 
-struct MultiModelsListView: View {
+struct ScrollMultiModelsView: View {
 
     @EnvironmentObject var listViewModel: MultiModelsListViewModel
-
-    @State private var endpoints = ["Characters", "Locations"]
 
     var body: some View {
         NavigationView {
             VStack {
-                Picker("Endpoints", selection: $listViewModel.selectorIndex) {
-                    ForEach(0 ..< endpoints.count) { index in
-                        Text(self.endpoints[index]).tag(index)
-                    }
-                }
-                .padding(.horizontal, 15)
-                .pickerStyle(SegmentedPickerStyle())
+                CustomScrollView(selectorIndex: $listViewModel.selectorIndex)
+                    .frame(height: 100)
                 List(listViewModel.models) { model in
                     // Cell
                     VStack(alignment: .leading) {
@@ -50,7 +43,7 @@ struct MultiModelsListView: View {
 
 }
 
-extension MultiModelsListView {
+extension ScrollMultiModelsView {
     private func onItemShowed<T:Identifiable>(_ item: T) {
         // Load
         if self.listViewModel.models.isLastItem(item) {
@@ -59,8 +52,9 @@ extension MultiModelsListView {
     }
 }
 
-struct CharactersListView_Previews: PreviewProvider {
+struct ScrollMultiModelsView_Previews: PreviewProvider {
     static var previews: some View {
-        MultiModelsListView().environmentObject(MultiModelsListViewModel())
+        ScrollMultiModelsView().environmentObject(MultiModelsListViewModel())
     }
 }
+

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9302ED2723A9F4EA0025C5D0 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302ED2623A9F4EA0025C5D0 /* CustomScrollView.swift */; };
+		9302ED2923A9F6EC0025C5D0 /* ScrollMultiModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302ED2823A9F6EC0025C5D0 /* ScrollMultiModelsView.swift */; };
 		9382905B2390C0B7002E6E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382905A2390C0B7002E6E28 /* AppDelegate.swift */; };
 		9382905D2390C0B7002E6E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382905C2390C0B7002E6E28 /* SceneDelegate.swift */; };
 		9382905F2390C0B7002E6E28 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382905E2390C0B7002E6E28 /* RootView.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9302ED2623A9F4EA0025C5D0 /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
+		9302ED2823A9F6EC0025C5D0 /* ScrollMultiModelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollMultiModelsView.swift; sourceTree = "<group>"; };
 		938290572390C0B7002E6E28 /* OTUSHomeWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTUSHomeWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9382905A2390C0B7002E6E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9382905C2390C0B7002E6E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				938290772390C3DF002E6E28 /* ModalView.swift */,
 				938290832390CDC0002E6E28 /* MatchDetailsView.swift */,
 				939A98C323A7A2EC00250C7B /* MultiModelsListView.swift */,
+				9302ED2823A9F6EC0025C5D0 /* ScrollMultiModelsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				93BA309F23A9DFAE00D265F3 /* ActivityIndicatorView.swift */,
+				9302ED2623A9F4EA0025C5D0 /* CustomScrollView.swift */,
 			);
 			path = Kit;
 			sourceTree = "<group>";
@@ -334,12 +340,14 @@
 				938290742390C2C5002E6E28 /* ListTabView.swift in Sources */,
 				939A98EF23A88F1300250C7B /* CodableHelper.swift in Sources */,
 				939A98F023A88F1300250C7B /* JSONEncodableEncoding.swift in Sources */,
+				9302ED2923A9F6EC0025C5D0 /* ScrollMultiModelsView.swift in Sources */,
 				9382907C2390C756002E6E28 /* Match.swift in Sources */,
 				938290722390C1D9002E6E28 /* FirstButtonTabView.swift in Sources */,
 				938290842390CDC0002E6E28 /* MatchDetailsView.swift in Sources */,
 				938290802390C81C002E6E28 /* MatchesListViewModel.swift in Sources */,
 				938290782390C3DF002E6E28 /* ModalView.swift in Sources */,
 				939A98ED23A88F1300250C7B /* CharactersAPI.swift in Sources */,
+				9302ED2723A9F4EA0025C5D0 /* CustomScrollView.swift in Sources */,
 				939A98F623A88F1300250C7B /* ModelCharacter.swift in Sources */,
 				939A98EE23A88F1300250C7B /* LocationsAPI.swift in Sources */,
 				939A98FA23A88F1300250C7B /* Models.swift in Sources */,
