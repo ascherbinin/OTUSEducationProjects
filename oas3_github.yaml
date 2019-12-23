@@ -1,0 +1,102 @@
+openapi: 3.0.1
+info:
+  title: GitHub
+  description: GitHub.com
+  version: 1.0.0
+servers:
+- url: https://api.github.com
+tags:
+  - name: search
+    description: Repo Search
+paths:
+  /search/repositories:
+    get:
+      tags: 
+        - search
+      summary: Repository List
+      operationId: searchReposGet
+      parameters:
+      - name: q
+        in: query
+        description: Query 
+        required: true
+        schema:
+          type: string
+      - name: order
+        in: query
+        description: Sort
+        required: true
+        schema:
+          $ref: '#/components/schemas/Order'
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/RepositoryList'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+components:
+  schemas:
+    ErrorModel:
+      type: object
+      required:
+      - message
+      - code
+      properties:
+        message:
+          type: string
+        code:
+          type: integer
+          minimum: 100
+          maximum: 600
+    Order:
+      type: string
+      enum:
+        - desc
+        - asc
+    RepositoryList:
+      type: object
+      properties:
+        total_count:
+          type: integer
+        incomplete_results:
+          type: boolean
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Repository'
+    Repository:
+      type: object
+      properties:
+        id:
+          type: integer
+        owner:
+          $ref: '#/components/schemas/User'
+        fullName:
+          type: string
+        language: 
+          type: string
+        description: 
+          type: string
+        stargazers_count: 
+          type: integer
+        watchers_count: 
+          type: integer
+        score: 
+          type: number
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        login:
+          type: string
+        avatarUrl:
+          type: string
+      
