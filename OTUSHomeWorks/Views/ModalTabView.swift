@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import BetterSheet
 
 struct ModalTabView: View {
 
@@ -20,7 +19,7 @@ struct ModalTabView: View {
                    Text("Open modal")
                }
                .font(Font.largeTitle)
-    .betterSheet(isPresented: $isShowedModal, onDismiss: { print("Dismiss modal")}) {
+    .sheet(isPresented: $isShowedModal, onDismiss: { print("Dismiss modal")}) {
         ModalView()
     }
     }

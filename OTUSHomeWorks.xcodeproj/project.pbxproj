@@ -12,6 +12,7 @@
 		933149A623B1261600987DA4 /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 933149A523B1261600987DA4 /* APIClient */; };
 		933149A823B126A200987DA4 /* SegmentedChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933149A723B126A200987DA4 /* SegmentedChartsView.swift */; };
 		933149AA23B126D000987DA4 /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933149A923B126D000987DA4 /* ChartsViewModel.swift */; };
+		933149AD23B12A4A00987DA4 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 933149AC23B12A4A00987DA4 /* SwiftUICharts */; };
 		9382905B2390C0B7002E6E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382905A2390C0B7002E6E28 /* AppDelegate.swift */; };
 		9382905D2390C0B7002E6E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382905C2390C0B7002E6E28 /* SceneDelegate.swift */; };
 		9382905F2390C0B7002E6E28 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382905E2390C0B7002E6E28 /* RootView.swift */; };
@@ -28,7 +29,6 @@
 		938290802390C81C002E6E28 /* MatchesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382907F2390C81C002E6E28 /* MatchesListViewModel.swift */; };
 		938290842390CDC0002E6E28 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290832390CDC0002E6E28 /* MatchDetailsView.swift */; };
 		938290872390CE6F002E6E28 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290862390CE6F002E6E28 /* DateExtensions.swift */; };
-		938290AA2394C5F7002E6E28 /* BetterSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 938290A92394C5F7002E6E28 /* BetterSheet */; };
 		939A98C123A7A2AE00250C7B /* RandomAccessCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A98C023A7A2AE00250C7B /* RandomAccessCollectionExtensions.swift */; };
 		939A98C423A7A2EC00250C7B /* MultiModelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A98C323A7A2EC00250C7B /* MultiModelsListView.swift */; };
 		939A98C723A7A3AA00250C7B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 939A98C623A7A3AA00250C7B /* Alamofire */; };
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				938290AA2394C5F7002E6E28 /* BetterSheet in Frameworks */,
+				933149AD23B12A4A00987DA4 /* SwiftUICharts in Frameworks */,
 				933149A623B1261600987DA4 /* APIClient in Frameworks */,
 				939A98C723A7A3AA00250C7B /* Alamofire in Frameworks */,
 			);
@@ -202,9 +202,9 @@
 			);
 			name = OTUSHomeWorks;
 			packageProductDependencies = (
-				938290A92394C5F7002E6E28 /* BetterSheet */,
 				939A98C623A7A3AA00250C7B /* Alamofire */,
 				933149A523B1261600987DA4 /* APIClient */,
+				933149AC23B12A4A00987DA4 /* SwiftUICharts */,
 			);
 			productName = OTUSLesson1_SwiftUI;
 			productReference = 938290572390C0B7002E6E28 /* OTUSHomeWorks.app */;
@@ -235,8 +235,8 @@
 			);
 			mainGroup = 9382904E2390C0B7002E6E28;
 			packageReferences = (
-				938290A82394C5F7002E6E28 /* XCRemoteSwiftPackageReference "BetterSheet" */,
 				939A98C523A7A3AA00250C7B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				933149AB23B12A4A00987DA4 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 938290582390C0B7002E6E28 /* Products */;
 			projectDirPath = "";
@@ -481,12 +481,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		938290A82394C5F7002E6E28 /* XCRemoteSwiftPackageReference "BetterSheet" */ = {
+		933149AB23B12A4A00987DA4 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/egeniq/BetterSheet.git";
+			repositoryURL = "https://github.com/AppPear/ChartView";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.4.2;
 			};
 		};
 		939A98C523A7A3AA00250C7B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -504,10 +504,10 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = APIClient;
 		};
-		938290A92394C5F7002E6E28 /* BetterSheet */ = {
+		933149AC23B12A4A00987DA4 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 938290A82394C5F7002E6E28 /* XCRemoteSwiftPackageReference "BetterSheet" */;
-			productName = BetterSheet;
+			package = 933149AB23B12A4A00987DA4 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 		939A98C623A7A3AA00250C7B /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
