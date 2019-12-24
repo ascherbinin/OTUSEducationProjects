@@ -41,24 +41,24 @@ struct MainTabView: View {
                     Image(systemName: "stop")
                 }
             }.tag(2)
-            SegmentedChartsView()
-                .environmentObject(ChartsViewModel())
-                .tabItem {
-                    VStack {
-                        Text("CHARTS")
-                            .font(Font.headline)
-                        Image(systemName: "person.3")
-                    }
-            }.tag(3)
-//            ScrollMultiModelsView()
-//                .environmentObject(MultiModelsListViewModel())
+//            SegmentedChartsView()
+//                .environmentObject(ChartsViewModel())
 //                .tabItem {
 //                    VStack {
-//                        Text("RAMS")
+//                        Text("CHARTS")
 //                            .font(Font.headline)
-//                        Image(systemName: "person.2")
+//                        Image(systemName: "person.3")
 //                    }
-//            }.tag(4)
+//            }.tag(3)
+            ScrollMultiModelsView()
+                .environmentObject(MultiModelsListViewModel())
+                .tabItem {
+                    VStack {
+                        Text("RAMS")
+                            .font(Font.headline)
+                        Image(systemName: "person.2")
+                    }
+            }.tag(3)
         }
     }
 }

@@ -15,8 +15,7 @@ struct FirstButtonTabView: View {
 
     var body: some View {
         Button(action: {
-            self.fromFirstTab = true
-            self.currentSelection = 1
+            AppState.shared.toggleOverlay()
         }) {
             Text("Open second")
         }

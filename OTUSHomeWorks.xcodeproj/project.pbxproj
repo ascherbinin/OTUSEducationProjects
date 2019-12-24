@@ -29,6 +29,7 @@
 		938290802390C81C002E6E28 /* MatchesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382907F2390C81C002E6E28 /* MatchesListViewModel.swift */; };
 		938290842390CDC0002E6E28 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290832390CDC0002E6E28 /* MatchDetailsView.swift */; };
 		938290872390CE6F002E6E28 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938290862390CE6F002E6E28 /* DateExtensions.swift */; };
+		938E303723B1CE9900639F15 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E303623B1CE9900639F15 /* AppState.swift */; };
 		939A98C123A7A2AE00250C7B /* RandomAccessCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A98C023A7A2AE00250C7B /* RandomAccessCollectionExtensions.swift */; };
 		939A98C423A7A2EC00250C7B /* MultiModelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A98C323A7A2EC00250C7B /* MultiModelsListView.swift */; };
 		939A98C723A7A3AA00250C7B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 939A98C623A7A3AA00250C7B /* Alamofire */; };
@@ -60,6 +61,7 @@
 		9382907F2390C81C002E6E28 /* MatchesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesListViewModel.swift; sourceTree = "<group>"; };
 		938290832390CDC0002E6E28 /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		938290862390CE6F002E6E28 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		938E303623B1CE9900639F15 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		939A98C023A7A2AE00250C7B /* RandomAccessCollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAccessCollectionExtensions.swift; sourceTree = "<group>"; };
 		939A98C323A7A2EC00250C7B /* MultiModelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModelsListView.swift; sourceTree = "<group>"; };
 		939A98C823A7A49600250C7B /* MultiModelsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModelsListViewModel.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				938290652390C0B9002E6E28 /* LaunchScreen.storyboard */,
 				938290682390C0B9002E6E28 /* Info.plist */,
 				938290622390C0B9002E6E28 /* Preview Content */,
+				938E303623B1CE9900639F15 /* AppState.swift */,
 			);
 			path = OTUSHomeWorks;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				9382905D2390C0B7002E6E28 /* SceneDelegate.swift in Sources */,
 				939A98C923A7A49600250C7B /* MultiModelsListViewModel.swift in Sources */,
 				9382905F2390C0B7002E6E28 /* RootView.swift in Sources */,
+				938E303723B1CE9900639F15 /* AppState.swift in Sources */,
 				9382907E2390C7C0002E6E28 /* Statistics.swift in Sources */,
 				938290702390C173002E6E28 /* MainTabView.swift in Sources */,
 				938290872390CE6F002E6E28 /* DateExtensions.swift in Sources */,

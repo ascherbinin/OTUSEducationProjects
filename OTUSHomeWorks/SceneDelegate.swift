@@ -27,7 +27,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: rootView)
             self.window = window
+            AppState.shared.mainWindow = window
             window.makeKeyAndVisible()
+
+            AppState.shared.secondWindow = UIWindow(windowScene: windowScene)
+            let vc = UIHostingController(rootView: SegmentedChartsView().environmentObject(ChartsViewModel()))
+            vc.view.backgroundColor = .clear
+            AppState.shared.secondWindow?.rootViewController = vc
+            AppState.shared.secondWindow?.windowLevel = UIWindow.Level.alert + 1
+            AppState.shared.secondWindow?.rootViewController = vc
         }
     }
 

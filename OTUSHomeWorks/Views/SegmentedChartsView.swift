@@ -48,10 +48,14 @@ struct SegmentedChartsView: View {
                                  gitDictionaries: chartsViewModel.gitRepositoriesDictionary,
                                  mortyCharactersArray: chartsViewModel.mortyCharactersArray,
                                  histogram: chartsViewModel.histogram)
+                Button(action: { AppState.shared.toggleOverlay() }) {
+                               Text("Close")
+                           }.padding()
             }.onAppear {
                 self.chartsViewModel.load()
             }
             .navigationBarTitle("Segments", displayMode: .inline)
+
         }
     }
 }
@@ -134,7 +138,7 @@ struct BarChartWithLegendView: View {
             BarChartView(data: data,
             title: title,
             form: CGSize(width: width,
-                         height: height - 40),
+                         height: height - 100),
             dropShadow: false)
             Text(self.legend)
                 .font(.headline)
